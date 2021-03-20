@@ -5,11 +5,11 @@ const express = require("express");
 const app = express();
 
 // set initial port
-let PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 // Sets up Express app to handle data parsing
-app.use(express.urlencoded({entended:true}));
+app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-
+app.use(express.static('public'));
 // Router
 // Points server to series of "route" files
 
